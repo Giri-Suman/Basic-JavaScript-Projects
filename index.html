@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Projects To Learn Concept</title>
+  </head>
+  <body>
+    <ul id="fileList"></ul>
+    <script>
+      const fileList = document.getElementById("fileList");
+
+      const files = ["Image Galary", "Weather App"];
+      fileList.innerHTML = "";
+
+      for (let i = 0; i < files.length; i++) {
+        const listItem = document.createElement("li");
+        const anchor = document.createElement("a");
+        anchor.textContent = files[i];
+        anchor.href = files[i] + "/index.html";
+        listItem.appendChild(anchor);
+        fileList.appendChild(listItem);
+      }
+    </script>
+  </body>
+</html>
